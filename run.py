@@ -1,9 +1,10 @@
 import requests
 
-location = input("Enter your desired location(post or city name): ")
+parameter = "t_2m:C"
+location = input("Enter your desired location(latitude,longitude): ")
 api_key = "#"
 
-url = f"https://api.openweathermap.org/data/2.5/weather?q={location}&appid={api_key}"
+url = f"https://api.meteomatics.com/{parameter}/now/json?latlon={location}&apikey={api_key}"
 
 response = requests.get(url)
 
