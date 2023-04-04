@@ -1,7 +1,12 @@
 import requests
 
-WEATHER_API_KEY = '9a1c17942dd0228bf3921afcac0459e6'
-TIMEZONE_API_KEY = 'I3Q9EKZ35PRW'
+import json
+
+with open('creds.json') as f:
+    creds = json.load(f)
+
+WEATHER_API_KEY = creds['WEATHER_API_KEY']
+TIMEZONE_API_KEY = creds['TIMEZONE_API_KEY']
 
 # Prompt the user to enter a city name or location.
 user_input = input("Enter a city name or location: ")
