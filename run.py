@@ -9,7 +9,7 @@ WEATHER_API_KEY = creds['WEATHER_API_KEY']
 TIMEZONE_API_KEY = creds['TIMEZONE_API_KEY']
 
 # Prompt the user to enter a city name or location.
-user_input = input("Enter a city name and we'll get some facts about the weather, time and temperature: ")
+user_input = input("Enter a city name and we will get some facts about the weather, time and temperature: ")
 
 # Construct the URL for the OpenWeatherMap API.
 url = f"https://api.openweathermap.org/data/2.5/weather?q={user_input}&units=metric&APPID={WEATHER_API_KEY}"
