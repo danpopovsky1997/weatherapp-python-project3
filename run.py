@@ -13,13 +13,11 @@ user_input = input("Enter a name of a city, please be precise: ")
 # Construct the URL for the OpenWeatherMap API.
 url = f"https://api.openweathermap.org/data/2.5/weather?q={user_input}&units=metric&APPID={WEATHER_API_KEY}"
 
-# Send a GET request to the API and store the response.
-response = requests.get(url)
+try:
+    # Send a GET request to the API and store the response.
+    response = requests.get(url)
+    response.raise_for_status()
 
-# Check if the API returned an error code.
-if response.status_code == 404:
-    print("No city found.")
-else:
     # Parse the response JSON and extract the weather and temperature data.
     data = response.json()
     weather = data['weather'][0]['main']
@@ -34,18 +32,24 @@ else:
 
     # Send a GET request to the API and store the response.
     time_response = requests.get(time_url)
+    time_response.raise_for_status()
 
-    # Check if the API returned an error code.
-    if time_response.status_code == 404:
-        print("Could not retrieve current time.")
-    else:
-        # Parse the response JSON and extract the current time data.
-        time_data = time_response.json()
-        current_time = time_data['formatted']
+    # Parse the response JSON and extract the current time data.
+    time_data = time_response.json()
+    current_time = time_data['formatted']
 
-        # Display the weather, temperature, and current time data to the user.
-        print(f"The weather in {user_input.title()} is {weather.lower()}.")
-        print(f"The temperature in {user_input.title()} is {temperature}°C.")
-        print(f"The current time in {user_input.title()} is {current_time}.")
+    # Display the weather, temperature, and current time data to the user.
+    print(f"The weather in {user_input.title()} is {weather.lower()}.")
+    print(f"The temperature in {user_input.title()} is {temperature}°C.")
+    print(f"The current time in {user_input.title()} is {current_time}.")
 
-        print()
+except requests.exceptions.HTTPError as e:
+    print(f"An HTTP error occurred: {e}")
+except requests.exceptions.ConnectionError as e:
+    print(f"A connection error occurred: {e}")
+except requests.exceptions.Timeout as e:
+    print(f"The request timed out: {e}")
+except requests.exceptions.RequestException as e:
+    print(f"An error occurred: {e}")
+
+print()
