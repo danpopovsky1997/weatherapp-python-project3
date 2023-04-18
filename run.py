@@ -48,3 +48,4 @@ else:
         print(f"The temperature in {user_input.title()} is {temperature}°C.")
         print(f"The current time in {user_input.title()} is {current_time}.")
 
+        print()
