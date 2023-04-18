@@ -1,5 +1,4 @@
 import requests
-
 import json
 
 with open('creds.json') as f:
@@ -9,7 +8,7 @@ WEATHER_API_KEY = creds['WEATHER_API_KEY']
 TIMEZONE_API_KEY = creds['TIMEZONE_API_KEY']
 
 # Prompt the user to enter a city name or location.
-user_input = input("Enter a city name and we will get some facts about the weather, time and temperature: ")
+user_input = input("Enter a name of a city, please be precise: ")
 
 # Construct the URL for the OpenWeatherMap API.
 url = f"https://api.openweathermap.org/data/2.5/weather?q={user_input}&units=metric&APPID={WEATHER_API_KEY}"
@@ -26,7 +25,7 @@ else:
     weather = data['weather'][0]['main']
     temperature = round(data['main']['temp'])
 
-# Get the latitude and longitude of the city.
+    # Get the latitude and longitude of the city.
     lat = data['coord']['lat']
     lon = data['coord']['lon']
 
