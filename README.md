@@ -50,7 +50,7 @@ C. Would you like to know the date?
 
 ### Validator Testing
 - The Python code was tested for validation using the PEP8 Python Validator provided by Code Institute.
-- ![Validation Testing](pythondocs/validation.PNG)
+![Validation Testing](pythondocs/validation.PNG)
 
 ## Deployment
 - The application was deployed using Heroku and linked to the GitHub repository for convenient updates when pushing changes via Gitpod's terminal and also version control.
