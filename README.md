@@ -62,4 +62,11 @@ C. Would you like to know the date?
 - The deployment process involved setting up var configs for the API keys and configuring the Heroku dyno to run the application's code. This was also a necessary step to take to ensure the API keys were safe from being publicly viewed. 
 
 ## Credits
+I would like to credit the following in aiding me with the development of this application:
+- The tutorial by Programming with Mosh on YouTube (https://www.youtube.com/watch?v=baWzHKfrvqw) was used as a reference for developing the Weather App.
+- OpenWeatherMap API (https://openweathermap.org/api) was used to gather weather data for a given location.
+- TimezoneDB (https://timezonedb.com/) was used to gather timezone data for a given location.
+- "Working with APIs in Python" by Corey Schafer (https://www.youtube.com/watch?v=VaDdGbC0wKU) - This video tutorial covers how to work with APIs in Python, including how to make requests, handle responses, and parse JSON data.
+- "Python Web Development with Flask - Full Course" by FreeCodeCamp.org (https://www.youtube.com/watch?v=Z1RJmh_OqeA) - This video tutorial covers how to develop a web application using the Flask framework in Python, including how to handle requests, use templates, and work with databases.
+- "Python JSON" by Tech With Tim (https://www.youtube.com/watch?v=9N6a-VLBa2I) - This video tutorial covers how to work with JSON data in Python, including how to encode and decode JSON data, and how to work with JSON files.
 
