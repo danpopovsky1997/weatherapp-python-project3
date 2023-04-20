@@ -1,7 +1,7 @@
 # Weather App
 (Developer: Daniel Popovsky)
 
-![Mockup Image](docs/mockup.png)
+![Mockup Image](pythondocs/mockup.png)
 
 [Live Running Program](https://weather-app-project-3.herokuapp.com/)
 
