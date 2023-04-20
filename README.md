@@ -19,6 +19,8 @@ A. The weather type.
 B. The temperature in Degrees Celcius.
 C. The date and time of the location inputted.
 
+![Application Snapshot](pythondocs/snapshot.PNG)
+
 Although a simple function, it shows how Python is used when it comes to extracting informtaion from the API.
 
 ### Planned Features
@@ -48,8 +50,11 @@ C. Would you like to know the date?
 #### Remaining Bugs
 - A bug that remains is when you enter numbers e.g. it gives a location, but my guess is that it is trying to locate an area using a zipcode or postcode. Only precise city names should be inputted into the terminal for accuracy.
 
+![Bug](pythondocs/bug.PNG)
+
 ### Validator Testing
-- The Python code was tested for validation using the PEP8 Python Validator provided by Code Institute.
+- The Python code was tested for validation using the PEP8 Python Validator provided by Code Institute. No warning or errors were found, apart from the following below:
+
 ![Validation Testing](pythondocs/validation.PNG)
 
 ## Deployment
